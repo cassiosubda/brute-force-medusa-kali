@@ -9,3 +9,4 @@
 2º - Iniciar os dois e fazer um snapshot no metasploitable para recuperar o trabalho em caso de falha da máquina. Como? Na guia do virtualbox com o metasploitable aberto clicar em máquina > criar snapshot > adicionar nome e descrição do snapshot > clicar em ok.
 
 ![snapshot](https://i.imgur.com/2nRB5Fb.jpeg)
+
