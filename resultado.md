@@ -8,7 +8,7 @@
 
 2º - Iniciar os dois e fazer um snapshot no metasploitable para recuperar o trabalho em caso de falha da máquina. Como? Na guia do virtualbox com o metasploitable aberto clicar em máquina > criar snapshot > adicionar nome e descrição do snapshot > clicar em ok.
 
-![snapshot](https://i.imgur.com/2nRB5Fb.jpeg)
+![snapshot](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_metasploit_04_11_2026_15kkkkk.png)
 
 &nbsp;
 
@@ -30,7 +30,7 @@ Como? Abra o Terminal do Kali Linux e digite o comando ping -c 3 nú.me.ro.ip
 
 Se houver resposta saberemos que a comunicação entre as duas máquinas está funcionando corretamente.
 
-![ping](https://i.imgur.com/zgwdhzk.jpeg)
+![ping](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_15_42_41.png)
 
 &nbsp;
 
