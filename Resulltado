@@ -1,3 +1,4 @@
+
 ## Simulando um Ataque de Brute Force de Senhas com Medusa e Kali Linux nos protocolos de rede FTP (transferência de arquivos), HTTP (web) e SMB (compartilhamento de recursos).
 
 
@@ -7,4 +8,4 @@
 
 2º - Iniciar os dois e fazer um snapshot no metasploitable para recuperar o trabalho em caso de falha da máquina. Como? Na guia do virtualbox com o metasploitable aberto clicar em máquina > criar snapshot > adicionar nome e descrição do snapshot > clicar em ok.
 
-![snapshot](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_metasploit_04_11_2026_15kkkkk.png)
+![snapshot](https://i.imgur.com/2nRB5Fb.jpeg)
