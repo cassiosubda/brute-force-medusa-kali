@@ -30,7 +30,7 @@ Como? Abra o Terminal do Kali Linux e digite o comando ping -c 3 nú.me.ro.ip
 
 Se houver resposta saberemos que a comunicação entre as duas máquinas está funcionando corretamente.
 
-![ping](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_15_42_41.png)
+![ping](https://github.com/cassiosubda/imagens/blob/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_15_42_41.png)
 
 &nbsp;
 
@@ -42,7 +42,7 @@ Este comando escaneia as portas 21,22,80,445 e 139. O parâmetro -sV identifica 
 
 Se a porta ftp estiver aberta tentaremos conectá-la diretamente.
 
-![Enumeração](https://i.imgur.com/KK3ZyLB.jpeg)
+![Enumeração](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_19_52_10.png)
 
 &nbsp;
 
@@ -52,7 +52,7 @@ Comando: ftp nú.me.ro.ip
 
 Caso a conexão aconteça pedirá o login e a senha. Como ainda não sabemos nenhum dos dois precisaremos fazer um ataque brute force (força bruta) utilizando a ferramenta Medusa para tentar descobri-los. Antes disso temos que criar duas listas: uma com possíveis nomes de usuários e outra com senhas comuns.
 
-![ftp login errado](https://i.imgur.com/SXoqjZ3.jpeg)
+![ftp login errado](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_06_01.png)
 
 Para sair do ftp é só digitar quit e apertar enter e para limpar a tela do terminal é só digitar clear e apertar enter
 
@@ -66,7 +66,7 @@ Comando usuários: echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 
 Comando senhas: echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
 
-![wordlists](https://i.imgur.com/OUaP9Fd.jpeg)
+![wordlists](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_13_23.png)
 
 &nbsp;
 
@@ -78,7 +78,7 @@ Onde -t6 significa que estamos usando 6 threads simultâneas, o que torna o ataq
 
 No ataque foram encontrados o login msfadmin e a senha msfadmin como credenciais válidas. Isso significa que conseguimos acessar o sistema via ftp com essas credenciais.
 
-![](https://i.imgur.com/SSLel4z.jpeg)
+![](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_20_34.png)
 
 &nbsp;
 
@@ -86,7 +86,7 @@ No ataque foram encontrados o login msfadmin e a senha msfadmin como credenciais
 
 Comando: ftp nú.me.ro.ip
 
-![login ftp](https://i.imgur.com/vlWsj7h.jpeg)
+![login ftp](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_29_26.png)
 
 &nbsp;
 
@@ -96,7 +96,7 @@ Comando: ftp nú.me.ro.ip
 
 Na sequência abrir o painel de ferramentas do desenvolvedor na página de teste de login do dvwa clicando em f12 e em seguida clicar na guia network, na navegação do tipo POST e em Request, que nos mostrará tudo o que o navegador está enviando e recebendo durante a interação, incluindo os nomes dos parâmetros que o servidor espera receber. A Medusa vai simular em cima destes parâmetros.
 
-![dvwa](https://i.imgur.com/KO9hGQA.jpeg)
+![dvwa](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_34_16.png)
 
 &nbsp;
 
@@ -114,7 +114,7 @@ As credenciais corretas encontradas aparecerão com a palavra SUCCESS.
 
 Em seguida utilizamos o primeiro login e senha encontrados para acessar o sistema.
 
-![medusa http](https://i.imgur.com/U4ci2QC.jpeg)
+![medusa http](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_20_31_56.png)
 
 &nbsp;
 
@@ -128,7 +128,7 @@ Comando: enum4linux -a 192.168.56.101 | tee enum4_output.txt
 
 Comando: less enum4_output.txt
 
-![rid](https://i.imgur.com/GnDALRm.jpeg)
+![rid](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_49_27.png)
 
 &nbsp;
 
@@ -140,7 +140,7 @@ Comando: echo -e "user\nmsfadmin\nservice" > smb_users.txt
 
 Comando: echo -e "password\n123456\nWelcome123\nmsfadmin" > senhas_spray
 
-![wordlists smb](https://i.imgur.com/hyk6zdF.jpeg)
+![wordlists smb](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_52_41.png)
 
 Ao contrário do brute force, que testa muitas senhas em um único usuário, o password spraying testa poucas senhas em muitos usuários.
 
@@ -164,7 +164,7 @@ Onde:
 
 -T 50 significa até 50 hosts em paralelo.
 
-![medusa smb](https://i.imgur.com/V5D345c.jpeg)
+![medusa smb](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_54_34.png)
 
 &nbsp;
 
@@ -174,7 +174,7 @@ Verifica se teremos acesso como administrador através das credenciais encontrad
 
 Comando: smbclient -L //192.168.56.101 -U msfadmin
 
-![acesso smb](https://i.imgur.com/D1oJen1.jpeg)
+![acesso smb](https://raw.githubusercontent.com/cassiosubda/imagens/main/VirtualBox_kali-linux-2026.2-virtualbox-amd64_04_11_2026_16_56_47.png)
 
 &nbsp;
 
